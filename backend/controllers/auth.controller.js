@@ -8,6 +8,7 @@ class AuthController {
             (item) => item.username === email && item.password === password
         );
         // delete target.password;
+        console.log(target)
         if (target) {
             const { id, username, role } = target;
             const accessToken = jwt.sign(

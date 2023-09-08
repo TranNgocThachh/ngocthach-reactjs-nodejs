@@ -4,6 +4,7 @@ const app = express();
 const authenticateJWT = require("./middlewares/authenticateJWT");
 const bodyParser = require("body-parser");
 const port = 3100;
+require("dotenv").config();
 
 app.use(cors());
 app.use(bodyParser.json());

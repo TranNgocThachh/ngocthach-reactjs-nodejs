@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { token } from '../../constants/auth-constant';
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: 'http://localhost:3100',
+    baseUrl: 'https://ngocthach-reactjs-nodejs-backend.vercel.app',
     prepareHeaders: (headers) => {
         const accessToken = localStorage.getItem(token);
         if (accessToken) {

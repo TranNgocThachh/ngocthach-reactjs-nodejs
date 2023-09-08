@@ -8,8 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -r dotenv/config ./index.js",
-    "vercel-build": "node ./index.js"
+    "start": "nodemon -r dotenv/config ./index.js"
   },
   "author": "",
   "license": "ISC",

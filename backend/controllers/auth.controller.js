@@ -11,6 +11,7 @@ class AuthController {
         console.log(target)
         if (target) {
             const { id, username, role } = target;
+            console.log('inside');
             const accessToken = jwt.sign(
                 {
                     id,
@@ -20,6 +21,7 @@ class AuthController {
                 process.env.JWT_SECRET_KEY,
                 { expiresIn: "2 days" }
             );
+            console.log('inside 2');
             res.json({ accessToken });
         } else {
             res.sendStatus(401);

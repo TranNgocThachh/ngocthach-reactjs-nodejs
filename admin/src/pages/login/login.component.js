@@ -17,6 +17,7 @@ const Login = () => {
 
     const getDataLogin = () => {
         const { email, password } = getValues();
+        debugger;
         dataLogin({ email, password })
             .unwrap()
             .then((data) => {

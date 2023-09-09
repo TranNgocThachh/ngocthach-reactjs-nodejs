@@ -18,7 +18,7 @@ const Login = () => {
     const getDataLogin = () => {
         const { email, password } = getValues();
         debugger;
-        dataLogin({ email: "admin@gmail.com", password: "admin123" })
+        dataLogin({ email: "admin@gmail.com", password: "admin124" })
             .unwrap()
             .then((data) => {
                 localStorage.setItem(token, data.accessToken);

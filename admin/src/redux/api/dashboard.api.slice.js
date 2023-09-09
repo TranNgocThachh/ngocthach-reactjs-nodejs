@@ -15,5 +15,5 @@ const dashboardApi = apiSlice.injectEndpoints({
 });
 
 export const {
-    useGetDataDashboard,
+    useGetDataDashboardQuery,
 } = dashboardApi;

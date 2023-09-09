@@ -103,7 +103,8 @@ const Order = () => {
                                         </td>
                                         <td className="px-3 py-4">  
                                             <span
-                                                className={`w-full px-2 py-1 rounded-lg text-white font-medium text-xs uppercase 
+                                                className={`
+                                                w-full px-2 py-1 rounded-lg text-white font-medium text-xs uppercase 
                                                 ${
                                                     order.status === 'pending' ? 'bg-yellow-500' :
                                                         order.status === 'confirmed' ? 'bg-blue-500' :

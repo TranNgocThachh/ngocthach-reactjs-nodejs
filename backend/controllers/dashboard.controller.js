@@ -10,7 +10,6 @@ class DashboardController {
     let totalOrders = orders.length;
     console.log(totalUsers);
     console.log(totalOrders);
-    console.log(totalProfit);
 
     res.json({ totalUsers, totalProfit: 45000000, totalOrders });
 

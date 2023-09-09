@@ -21,6 +21,7 @@ class AuthController {
                 process.env.JWT_SECRET_KEY,
                 { expiresIn: "2 days" }
             );
+            console.log(accessToken);
             console.log('inside 2');
             res.json({ accessToken });
         } else {

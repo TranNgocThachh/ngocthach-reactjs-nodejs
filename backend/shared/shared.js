@@ -24,7 +24,11 @@ const admins = [
     { id: 3, username: "user@gmail.com", password: "user123", role: "user" },
     { id: 4, username: "cus01@gmail.com", password: "123456", role: "anonymous" },
     { id: 5, username: "cus02@gmail.com", password: "123456", role: "anonymous" },
-];
+    { id: 6, username: "cus03@gmail.com", password: "123456", role: "anonymous" },
+    { id: 7, username: "cus04@gmail.com", password: "123456", role: "anonymous" },
+    { id: 8, username: "cus05@gmail.com", password: "123456", role: "anonymous" },
+    { id: 9, username: "cus06@gmail.com", password: "123456", role: "anonymous" },
+];  
 
 const employees = [
     {
@@ -74,110 +78,6 @@ const employees = [
         phonenumber: '0903044766',
         email: 'employee6@gmail.com',
         address: 'Địa chỉ 6'
-    },
-    {
-        id: 7,
-        fullname: 'employee 7',
-        position: 'staff',
-        phonenumber: '0903044767',
-        email: 'employee7@gmail.com',
-        address: 'Địa chỉ 7'
-    },
-    {
-        id: 8,
-        fullname: 'employee 8',
-        position: 'staff',
-        phonenumber: '0903044768',
-        email: 'employee8@gmail.com',
-        address: 'Địa chỉ 8'
-    },
-    {
-        id: 9,
-        fullname: 'employee 9',
-        position: 'staff',
-        phonenumber: '0903044769',
-        email: 'employee9@gmail.com',
-        address: 'Địa chỉ 9'
-    },
-    {
-        id: 10,
-        fullname: 'employee 10',
-        position: 'staff',
-        phonenumber: '0903044710',
-        email: 'employee10@gmail.com',
-        address: 'Địa chỉ 10'
-    },
-    {
-        id: 11,
-        fullname: 'employee 11',
-        position: 'staff',
-        phonenumber: '0903044711',
-        email: 'employee11@gmail.com',
-        address: 'Địa chỉ 11'
-    },
-    {
-        id: 12,
-        fullname: 'employee 12',
-        position: 'staff',
-        phonenumber: '0903044712',
-        email: 'employee12@gmail.com',
-        address: 'Địa chỉ 12'
-    },
-    {
-        id: 13,
-        fullname: 'employee 13',
-        position: 'staff',
-        phonenumber: '0903044713',
-        email: 'employee13@gmail.com',
-        address: 'Địa chỉ 13'
-    },
-    {
-        id: 14,
-        fullname: 'employee 14',
-        position: 'staff',
-        phonenumber: '0903044714',
-        email: 'employee14@gmail.com',
-        address: 'Địa chỉ 14'
-    },
-    {
-        id: 15,
-        fullname: 'employee 15',
-        position: 'staff',
-        phonenumber: '0903044715',
-        email: 'employee15@gmail.com',
-        address: 'Địa chỉ 15'
-    },
-    {
-        id: 16,
-        fullname: 'employee 16',
-        position: 'staff',
-        phonenumber: '0903044716',
-        email: 'employee16@gmail.com',
-        address: 'Địa chỉ 16'
-    },
-    {
-        id: 17,
-        fullname: 'employee 17',
-        position: 'staff',
-        phonenumber: '0903044717',
-        email: 'employee17@gmail.com',
-        address: 'Địa chỉ 17'
-    },
-    {
-        id: 18,
-        fullname: 'employee 18',
-        position: 'staff',
-        phonenumber: '0903044718',
-        email: 'employee18@gmail.com',
-        address: 'Địa chỉ 18'
-    },
-    {
-        id: 19,
-        fullname: 'employee 19',
-        position: 'staff',
-        phonenumber: '0903044719',
-        email: 'employee19@gmail.com',
-        address: 'Địa chỉ 19'
     },
 ];
 
@@ -230,118 +130,6 @@ const customers = [
         email: 'cus06@gmail.com',
         address: 'Address 06'
     },
-    {
-        id: 7,
-        cusname: 'Customer 07',
-        phonenumber: '0918093327',
-        groupname: 'group02',
-        email: 'cus07@gmail.com',
-        address: 'Address 07'
-    },
-    {
-        id: 8,
-        cusname: 'Customer 08',
-        phonenumber: '0918093328',
-        groupname: 'group02',
-        email: 'cus08@gmail.com',
-        address: 'Address 08'
-    },
-    {
-        id: 9,
-        cusname: 'Customer 09',
-        phonenumber: '0918093329',
-        groupname: 'group02',
-        email: 'cus09@gmail.com',
-        address: 'Address 09'
-    },
-    {
-        id: 10,
-        cusname: 'Customer 10',
-        phonenumber: '0918093310',
-        groupname: 'group03',
-        email: 'cus10@gmail.com',
-        address: 'Address 10'
-    },
-    {
-        id: 11,
-        cusname: 'Customer 11',
-        phonenumber: '0918093311',
-        groupname: 'group03',
-        email: 'cus11@gmail.com',
-        address: 'Address 11'
-    },
-    {
-        id: 12,
-        cusname: 'Customer 12',
-        phonenumber: '0918093312',
-        groupname: 'group03',
-        email: 'cus12@gmail.com',
-        address: 'Address 12'
-    },
-    {
-        id: 13,
-        cusname: 'Customer 13',
-        phonenumber: '0918093313',
-        groupname: 'group03',
-        email: 'cus13@gmail.com',
-        address: 'Address 13'
-    },
-    {
-        id: 14,
-        cusname: 'Customer 14',
-        phonenumber: '0918093314',
-        groupname: 'group03',
-        email: 'cus14@gmail.com',
-        address: 'Address 14'
-    },
-    {
-        id: 15,
-        cusname: 'Customer 15',
-        phonenumber: '0918093315',
-        groupname: 'group03',
-        email: 'cus15@gmail.com',
-        address: 'Address 15'
-    },
-    {
-        id: 16,
-        cusname: 'Customer 16',
-        phonenumber: '0918093316',
-        groupname: 'group03',
-        email: 'cus16@gmail.com',
-        address: 'Address 16'
-    },
-    {
-        id: 17,
-        cusname: 'Customer 17',
-        phonenumber: '0918093317',
-        groupname: 'group03',
-        email: 'cus17@gmail.com',
-        address: 'Address 17'
-    },
-    {
-        id: 18,
-        cusname: 'Customer 18',
-        phonenumber: '0918093318',
-        groupname: 'group03',
-        email: 'cus18@gmail.com',
-        address: 'Address 18'
-    },
-    {
-        id: 19,
-        cusname: 'Customer 19',
-        phonenumber: '0918093319',
-        groupname: 'group03',
-        email: 'cus19@gmail.com',
-        address: 'Address 19'
-    },
-    {
-        id: 20,
-        cusname: 'Customer 20',
-        phonenumber: '0918093320',
-        groupname: 'group03',
-        email: 'cus20@gmail.com',
-        address: 'Address 20'
-    }
 ]
 
 const groupCustomer = [
@@ -351,7 +139,7 @@ const groupCustomer = [
 ]
 
 
-let products = [
+const products = [
     { id: 1, proname: 'Apple MacBook Pro 17"', category: 'Apple', color: 'Gray', quantity: 35, entryprice: 30000000, price: 45000000, discount: 0, image: 'https://laptopvang.com/wp-content/uploads/2023/01/macbook_pro_16_inch_2023_m2_max_Space_gray-600x600.png' },
     { id: 2, proname: 'Dell XPS 15', category: 'Dell', color: 'Silver', quantity: 25, entryprice: 25000000, price: 35000000, discount: 10, image: 'https://laptop88.vn/media/news/1008_Dellxps15.jpg' },
     { id: 3, proname: 'HP Spectre x360 15.6', category: 'HP', color: 'Black', quantity: 50, entryprice: 20000000, price: 30000000, discount: 20, image: 'https://laptoptitan.vn/wp-content/uploads/2020/10/HP-Spectre-X360-15-002.jpg' },

@@ -101,7 +101,7 @@ const Order = () => {
                                         <td className="px-6 py-4">
                                             {order.adminConfirm ? order.adminConfirm : '...'}
                                         </td>
-                                        <td className="px-6 py-4">  
+                                        <td className="px-3 py-4">  
                                             <span
                                                 className={`w-full px-2 py-1 rounded-lg text-white font-medium text-xs uppercase 
                                                 ${

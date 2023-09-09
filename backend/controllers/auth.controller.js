@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
 const { admins } = require("../shared/shared");
+require('dotenv').config();
 
 class AuthController {
     login(req, res) {

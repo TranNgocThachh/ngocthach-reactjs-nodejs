@@ -4,10 +4,10 @@ class DashboardController {
   getDataDashboard(req, res) {
 
     let totalUsers = customers.length;
-    let totalOrders = dataOrders.length;
+    let totalOrders = orders.length;
 
     let totalProfit = 0;
-    let dataOrders = orders.map((order) => {
+    orders.map((order) => {
       let profit = order.products.reduce((acc, product) => acc + (product.quantity * (product.saleprice - product.entryprice)), 0)
       return totalProfit += profit;
     })

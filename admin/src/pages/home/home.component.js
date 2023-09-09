@@ -2,6 +2,7 @@ import { useGetDataDashboardQuery } from "../../redux/api/dashboard.api.slice";
 
 
 const Home = () => {
+    
     const { data } = useGetDataDashboardQuery();
     let totalUsers = data?.totalUsers;
     let totalOrders = data?.totalOrders;

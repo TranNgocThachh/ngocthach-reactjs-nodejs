@@ -3,9 +3,15 @@ import { useGetDataDashboard } from "../../redux/api/dashboard.api.slice";
 
 const Home = () => {
     const { data } = useGetDataDashboard();
-    let totalUsers = data?.totalUsers;
-    let totalProfit = data?.totalProfit;
-    let totalOrders = data?.totalOrders;
+    let totalUsers = 0;
+    let totalProfit = 0;
+    let totalOrders = 0;
+    if (data) {
+        console.log(data);
+        totalUsers = data?.totalUsers;
+        totalProfit = data?.totalProfit;
+        totalOrders = data?.totalOrders;
+    }
 
     return (
         <div className="container mt-12">

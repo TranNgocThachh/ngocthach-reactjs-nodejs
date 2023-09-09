@@ -2,7 +2,7 @@ import { useGetDataDashboard } from "../../redux/api/dashboard.api.slice";
 
 
 const Home = () => {
-    const { data: {} } = useGetDataDashboard();
+    const { data: {} } = useGetDataDashboard(); 
     let totalUsers = 0;
     let totalProfit = 0;
     let totalOrders = 0;

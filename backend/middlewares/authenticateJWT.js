@@ -6,7 +6,7 @@ const authenticateJWT = (role = []) => {
     if (authHeader) {
         const accessToken = authHeader.split(' ')[1];
   
-        jwt.verify(accessToken, process.env.JWT_SECRET_KEY, (err, user) => {
+        jwt.verify(accessToken, `${process.env.JWT_SECRET_KEY}`, (err, user) => {
             if (err) {
               return res.sendStatus(401);
             }

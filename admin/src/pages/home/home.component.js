@@ -3,10 +3,9 @@ import { useGetDataDashboard } from "../../redux/api/dashboard.api.slice";
 
 const Home = () => {
     const { data } = useGetDataDashboard();
-    console.log(data);
-    // let totalUsers = data?.totalUsers;
-    // let totalProfit = data?.totalProfit;
-    // let totalOrders = data?.totalOrders;
+    let totalUsers = data?.totalUsers;
+    let totalProfit = data?.totalProfit;
+    let totalOrders = data?.totalOrders;
 
     return (
         <div className="container mt-12">
@@ -16,7 +15,7 @@ const Home = () => {
                         Total users
                     </div>
                     <div className="mt-1 text-3xl font-semibold text-gray-900">
-                        {/* {totalUsers} */}
+                        {totalUsers}
                     </div>
                 </div>
                 <div className="w-full px-4 py-5 bg-white rounded-lg shadow">
@@ -24,7 +23,7 @@ const Home = () => {
                         Total Profit
                     </div>
                     <div className="mt-1 text-3xl font-semibold text-gray-900">
-                        {/* {totalProfit} */}
+                        {totalProfit}
                     </div>
                 </div>
                 <div className="w-full px-4 py-5 bg-white rounded-lg shadow">
@@ -32,7 +31,7 @@ const Home = () => {
                         Total Orders
                     </div>
                     <div className="mt-1 text-3xl font-semibold text-gray-900">
-                        {/* {totalOrders} */}
+                        {totalOrders}
                     </div>
                 </div>
             </div>

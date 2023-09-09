@@ -70,7 +70,7 @@ class ProductsController {
     };
 
     products.push(product);
-    res.json(product);
+    res.json(products);
   };
 
   // [PATCH] /products/:id

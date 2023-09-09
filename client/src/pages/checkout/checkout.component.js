@@ -15,9 +15,8 @@ const CheckOut = () => {
 
     const {
         register,
-        getValues,
         handleSubmit,
-        formState: { errors, isValid },
+        formState: { errors },
     } = useForm();
 
     const onSubmit = data => console.log(data);
@@ -33,6 +32,7 @@ const CheckOut = () => {
         if (!customer) {
             return;
         }
+        console.log(customer);
         setCusname(customer.cusname);
         setPhonenumber(customer.phonenumber);
         setAddress(customer.address);
@@ -40,19 +40,21 @@ const CheckOut = () => {
 
     const [addorder] = useAddOrderMutation();
     const handleCheckout = () => {
-        let order = [];
-        if (isValid) {
-            order = {
-                ...getValues(),
-                products: [...cart],
-                totalCost,
-                status: 'pending'
-            };
+        if (customer) {
             try {
+                let order = {
+                    cusname,
+                    phonenumber,
+                    address,
+                    products: [...cart],
+                    totalCost,
+                    status: 'pending'
+                };
                 addorder(order);
                 dispatch(removeAll());
                 alert('Your order will be processed as soon as possible!');
             } catch (err) {
+                alert('Failed!');
                 console.log(err);
             }
         }
@@ -154,7 +156,6 @@ const CheckOut = () => {
                     </button>
                     <button
                         className="px-4 py-1 text-white font-light tracking-wider bg-gray-500 rounded hover:bg-gray-800 disabled:opacity-40 disabled:hover:bg-gray-500"
-                        type="submit"
                         onClick={handleCheckout}
                     >
                         Confirm

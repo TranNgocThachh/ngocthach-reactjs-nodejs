@@ -36,14 +36,18 @@ class Orders {
       
       // [POST] /orders
       addOrder (req, res) {
-        const order = {
-          id: nextId(orders),
-          ...req.body,
-        };
+        const { cusname, phonenumber, address } = req.body;
+        if ( cusname && phonenumber && address) {
+          const order = {
+            id: nextId(orders),
+            ...req.body,
+          };
+          orders.push(order);
+          res.json(order);
+        } else {
+          res.sendStatus(500);
+        }
       
-        orders.push(order);
-        console.log(order);
-        res.json(order);
       };
       
       // [PATCH] /orders/:id

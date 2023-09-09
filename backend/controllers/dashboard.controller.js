@@ -8,6 +8,9 @@ class DashboardController {
       return acc += (products.quantity * (products.salePrice - products.entryPrice));
     }, 0)
     let totalOrders = orders.length;
+    console.log(totalUsers);
+    console.log(totalOrders);
+    console.log(totalProfit);
 
     res.json({ totalUsers, totalProfit, totalOrders });
 

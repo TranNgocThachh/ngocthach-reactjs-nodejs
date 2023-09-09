@@ -1,9 +1,11 @@
-import { useGetCustomersQuery } from "../../redux/api/customer.api.slice";
+import { useGetDataDashboard } from "../../redux/api/dashboard.api.slice";
 
 
 const Home = () => {
-    const { data: customers } = useGetCustomersQuery({});
-    let totalUsers = customers?.totalUsers;
+    const { data } = useGetDataDashboard();
+    let totalUsers = data?.totalUsers;
+    let totalProfit = data?.totalProfit;
+    let totalOrders = data?.totalOrders;
 
     return (
         <div className="container mt-12">
@@ -21,7 +23,7 @@ const Home = () => {
                         Total Profit
                     </div>
                     <div className="mt-1 text-3xl font-semibold text-gray-900">
-                        450000 vnđ
+                        {totalProfit}
                     </div>
                 </div>
                 <div className="w-full px-4 py-5 bg-white rounded-lg shadow">
@@ -29,7 +31,7 @@ const Home = () => {
                         Total Orders
                     </div>
                     <div className="mt-1 text-3xl font-semibold text-gray-900">
-                        10
+                        {totalOrders}
                     </div>
                 </div>
             </div>

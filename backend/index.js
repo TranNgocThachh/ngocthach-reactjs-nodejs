@@ -16,6 +16,7 @@ const EmployeesController = require('./controllers/employees.controller');
 const CustomersController = require("./controllers/customers.controller");
 const ProductsController = require("./controllers/products.controller");
 const OrdersController = require("./controllers/orders.controller");
+const DashboardController = require("./controllers/dashboard.controller");
 
 app.get("/", (req, res) => {
   res.send("LetDiv");
@@ -54,6 +55,8 @@ app.get("/orders", authenticateJWT(['admin', 'user']), OrdersController.getOrder
 app.get("/orders/:id", authenticateJWT(['admin', 'user']), OrdersController.getOrder);
 app.post("/orders", OrdersController.addOrder);
 app.patch("/orders/:id", authenticateJWT(['admin']), OrdersController.updateOrder);
+// Dashboard 
+app.get("/dashboard", DashboardController.getDataDashboard);
 
 app.listen(port, () => {  
   console.log(`LetDiv app listening on port ${port}`);

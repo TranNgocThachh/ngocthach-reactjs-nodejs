@@ -17,7 +17,7 @@ const CheckOut = () => {
         register,
         getValues,
         handleSubmit,
-        formState: { errors, isValid, isDirty },
+        formState: { errors, isValid },
     } = useForm();
 
     const onSubmit = data => console.log(data);
@@ -41,13 +41,13 @@ const CheckOut = () => {
     const [addorder] = useAddOrderMutation();
     const handleCheckout = () => {
         let order = [];
-        order = {
-            ...getValues(),
-            products: [...cart],
-            totalCost,
-            status: 'pending'
-        };
         if (isValid) {
+            order = {
+                ...getValues(),
+                products: [...cart],
+                totalCost,
+                status: 'pending'
+            };
             try {
                 addorder(order);
                 dispatch(removeAll());
@@ -153,7 +153,6 @@ const CheckOut = () => {
                         Cancel
                     </button>
                     <button
-                        disabled={!isDirty}
                         className="px-4 py-1 text-white font-light tracking-wider bg-gray-500 rounded hover:bg-gray-800 disabled:opacity-40 disabled:hover:bg-gray-500"
                         type="submit"
                         onClick={handleCheckout}

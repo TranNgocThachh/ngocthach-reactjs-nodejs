@@ -1,5 +1,7 @@
 const jwt = require("jsonwebtoken");
 const { admins } = require("../shared/shared");
+const dotenv = require('dotenv')
+dotenv.config();
 
 class AuthController {
     login(req, res) {
@@ -18,7 +20,7 @@ class AuthController {
                     username,
                     role,
                 },
-                process.env.JWT_SECRET_KEY,
+                `${process.env.JWT_SECRET_KEY}`,
                 { expiresIn: "2 days" }
             );
             console.log(accessToken);

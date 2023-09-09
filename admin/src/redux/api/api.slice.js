@@ -4,7 +4,7 @@ import { token } from '../../constants/auth-constant';
 const baseQuery = fetchBaseQuery({
     baseUrl: 'https://ngocthach-reactjs-nodejs-backend.vercel.app',
     prepareHeaders: (headers) => {
-        const accessToken = localStorage.getItem(token);
+        const accessToken = JSON.parse(localStorage.getItem(token));
         if (accessToken) {
             headers.set('authorization', `Bearer ${accessToken}`);
         }

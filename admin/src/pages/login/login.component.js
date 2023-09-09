@@ -17,11 +17,10 @@ const Login = () => {
 
     const getDataLogin = () => {
         const { email, password } = getValues();
-        debugger;
         dataLogin({ email, password })
             .unwrap()
             .then((data) => {
-                localStorage.setItem(token, data.accessToken);
+                localStorage.setItem(token, JSON.stringify(data.accessToken));
                 navigate('/');
                 alert('Login successfully');
             })

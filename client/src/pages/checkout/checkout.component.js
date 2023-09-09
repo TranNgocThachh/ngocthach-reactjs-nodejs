@@ -40,7 +40,7 @@ const CheckOut = () => {
 
     const [addorder] = useAddOrderMutation();
     const handleCheckout = () => {
-        if (customer) {
+        if (cusname !== '' && phonenumber !== '' && address !== '') {
             try {
                 let order = {
                     cusname,

@@ -16,7 +16,7 @@ const CheckOut = () => {
     const {
         register,
         handleSubmit,
-        formState: { errors },
+        formState: { errors, isValid },
     } = useForm();
 
     const onSubmit = data => console.log(data);
@@ -40,7 +40,7 @@ const CheckOut = () => {
 
     const [addorder] = useAddOrderMutation();
     const handleCheckout = () => {
-        if (cusname !== '' && phonenumber !== '' && address !== '') {
+        if (isValid) {
             try {
                 let order = {
                     cusname,

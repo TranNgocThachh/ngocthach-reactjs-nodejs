@@ -14,7 +14,6 @@ const AddEmployee = () => {
 
     const handleCreate = () => {
         let body = { ...getValues() };
-        console.log(body);
         if (isValid) {
             addEmployee(body)
                 .unwrap()

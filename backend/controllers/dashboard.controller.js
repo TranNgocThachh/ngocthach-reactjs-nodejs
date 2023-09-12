@@ -12,10 +12,6 @@ class DashboardController {
       return totalProfit += profit;
     })
 
-    console.log(totalUsers);
-    console.log(totalOrders);
-    console.log(totalProfit);
-
     res.json({ totalUsers, totalProfit, totalOrders });
 
   };

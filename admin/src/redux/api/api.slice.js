@@ -14,6 +14,9 @@ const baseQuery = fetchBaseQuery({
 
 const baseQueryWithAuth = async (args, api, extraOptions) => {
     const result = await baseQuery(args, api, extraOptions);
+    if (args.url === '/accounts' && result.error && result.error.originalStatus === 400) {
+        alert("This username already exists!");
+    }
     if (args.url !== 'login' && args.url !== 'register') {
         if (result.error && result.error.originalStatus === 401) {
             window.location.href = '/login';

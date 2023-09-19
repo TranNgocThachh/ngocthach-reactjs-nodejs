@@ -1,8 +1,8 @@
-const { pagination, totalPage, nextId, admins } = require("../shared/shared");
+const { pagination, totalPage, nextId, admins, customers, employees } = require("../shared/shared");
 
 class AccountsController {
     getAccounts(req, res) {
-        const { search, page } = req.query;
+        const { search = '', page = 1 } = req.query;
         let filterAccounts = admins;
 
         if (search) {
@@ -33,14 +33,42 @@ class AccountsController {
 
     addAccount(req, res) {
         let role = 'anonymous';
-        const account = {
-            id: nextId(admins),
-            ...req.body,
-            role
-        };
+        let isValid = true;
+        let isCustomerValid = true;
+        let isEmployeeValid = true;
+        const { username } = req.body;
 
-        admins.push(account);
-        res.json(account);
+        admins.some(account => {
+            if (account.username === username) {
+                return isValid = false;
+            }
+        })   
+        
+        customers.some(account => {
+            if (account.email === username) {
+                return isCustomerValid = false;
+            }
+        })
+
+        employees.some(account => {
+            if (account.email === username) {
+                return isEmployeeValid = false;
+            }
+        })
+
+        if (isCustomerValid && isEmployeeValid && isValid) {
+            const account = {
+                id: nextId(admins),
+                ...req.body,
+                role
+            };
+    
+            admins.push(account);
+            res.json(account);
+        }
+        else {
+            res.sendStatus(400);
+        }
     }
 
     updateAccount(req, res) {

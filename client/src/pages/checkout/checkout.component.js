@@ -32,7 +32,6 @@ const CheckOut = () => {
         if (!customer) {
             return;
         }
-        console.log(customer);
         setCusname(customer.cusname);
         setPhonenumber(customer.phonenumber);
         setAddress(customer.address);
@@ -40,7 +39,7 @@ const CheckOut = () => {
 
     const [addorder] = useAddOrderMutation();
     const handleCheckout = () => {
-        if (isValid) {
+        if (cusname && phonenumber && address ? true : isValid) {
             try {
                 let order = {
                     cusname,

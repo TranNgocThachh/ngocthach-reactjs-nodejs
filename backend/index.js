@@ -46,7 +46,7 @@ app.patch("/customers/:id", authenticateJWT(['admin', 'user']), CustomersControl
 app.delete('/customers/:id', authenticateJWT(['admin', 'user']), CustomersController.deleteCustomer);
 // Products
 app.get("/products", ProductsController.getProducts);
-app.get("/products/:id", authenticateJWT(['admin', 'user']), ProductsController.getProduct);
+app.get("/products/:id", ProductsController.getProduct);
 app.post("/products", authenticateJWT(['admin', 'user']), ProductsController.addProduct);
 app.patch("/products/:id", authenticateJWT(['admin', 'user']), ProductsController.updateProduct);
 app.delete('/products/:id', authenticateJWT(['admin', 'user']), ProductsController.deleteProduct);

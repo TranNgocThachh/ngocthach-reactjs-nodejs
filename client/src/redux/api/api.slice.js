@@ -34,6 +34,12 @@ const apiSlice = createApi({
             })
         }),
 
+        getProduct: builder.query({
+            query: (id) => ({
+                url: `/products/${id}`,
+            })
+        }),
+
         addAccount: builder.mutation({
             query: (body) => ({
                 url: '/accounts',
@@ -68,6 +74,7 @@ const apiSlice = createApi({
 export const {
     //
     useGetProductsQuery,
+    useGetProductQuery,
     useDataLoginMutation,
     //
     useGetUserQuery,

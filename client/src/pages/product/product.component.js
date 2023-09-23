@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { useGetProductsQuery } from "../../redux/api/api.slice";
-// import { addToCart } from "../../shared/add-to-cart";
 import { addProductToCart, statusChange } from "../../redux/client/carts.slice";
 
 
 const Product = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const { search } = useSelector(state => state.filters);
     const { data } = useGetProductsQuery({ search });
     let dataProducts = [];
@@ -51,7 +52,9 @@ const Product = () => {
                                 }
                             </div>
                             <div className='flex justify-between'>
-                                <button className="w-2/6 px-2 py-2 mt-4 font-medium bg-gray-300 rounded-xl hover:bg-gray-400 focus:outline-none focus:bg-gray-400">
+                                <button 
+                                onClick={() => navigate(`/product-detail/${pro.id}`)}
+                                className="w-2/6 px-2 py-2 mt-4 font-medium bg-gray-300 rounded-xl hover:bg-gray-400 focus:outline-none focus:bg-gray-400">
                                     <span>View</span>
                                 </button>
                                 <button

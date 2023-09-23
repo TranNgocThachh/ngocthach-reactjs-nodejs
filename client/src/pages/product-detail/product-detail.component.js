@@ -36,7 +36,21 @@ const ProductDetail = () => {
                             </div>
                         </div>
                         <div className="flex">
-                            <span className="title-font font-medium text-2xl text-gray-900">{data?.saleprice}đ</span>
+                            {
+                                data?.discount === 0 ?
+                                    <span className="title-font font-medium text-2xl text-gray-900">
+                                        {data?.saleprice}đ
+                                    </span>
+                                    :
+                                    <>
+                                        <span className="title-font font-medium text-2xl text-red-500 italic line-through px-4">
+                                            {data?.price}đ
+                                        </span>
+                                        <span className="title-font font-medium text-2xl text-gray-900">
+                                            {data?.saleprice}đ
+                                        </span>
+                                    </>
+                            }
                             <button
                                 onClick={() => hanleAddtoCart(data)}
                                 className="flex ml-auto text-white bg-gray-500 border-0 py-2 px-6 focus:outline-none hover:bg-gray-600 rounded">Add to cart</button>

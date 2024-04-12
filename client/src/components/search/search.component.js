@@ -23,11 +23,11 @@ const Search = () => {
                     handleSearch();
                 }}
             >
-                <div className="relative flex h-9 px-3">
+                <div className="relative flex h-9 px-3 rounded-md bg-gray-100 mb-[0.2rem] focus:border-gray-100 focus:bg-white ">
                     <input
                         type="text"
                         placeholder="Enter keywords to search"
-                        className="px-2 rounded-md bg-gray-100 mb-[0.2rem] focus:border-gray-100 focus:bg-white focus:ring-0 text-sm"
+                        className="px-2 focus:ring-0 text-sm"
                         onChange={(event) => setSearchInput(event.target.value)}
                     />
                     <svg
